@@ -12,9 +12,9 @@ For Visual Studio, the MSC warning number should be used to specify the warning.
 
 In addition, Premake provides a special value to turn on all linker warnings.
 
-| Value   | Description                   |
--------------------------------------------
-| All | Treat all linker warnings as errors   |
+| Value | Description                           |
+|-------|---------------------------------------|
+| All   | Treat all linker warnings as errors   |
 
 ### Applies To ###
 
@@ -28,7 +28,7 @@ Premake 5.0 or later. Special value `All` available since Premake 5.0-beta5 or l
 
 ```lua
 filter { "toolset:msc" }
-	fatalwarnings { "4044" } -- unrecognized option 'option'; ignored
+	linkerfatalwarnings { 4044 } -- unrecognized option 'option'; ignored
 
 filter {}
 ```
